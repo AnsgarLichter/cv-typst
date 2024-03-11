@@ -55,8 +55,6 @@
   #text(font: fonts.name, 18pt, weight: 500)[Master Student Computer Science bei SAP]
   #v(2.5mm)
 
-  //TODO: Extract
-  #set align(center)
   #table(
     columns: 5,
     inset: 0pt,
@@ -198,6 +196,7 @@
     inset: 0pt,
     column-gutter: 10pt,
     stroke: none,
+    align: (horizon, left),
     {text(category)},
     {
       for skill in skills {

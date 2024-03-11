@@ -62,7 +62,9 @@
   date: "09/2023 - 09/2024",
   location: "",
   logo: "ucla.png",
-  description: "Public-private scholarship awarded for academic potential"
+  description: list(
+    [Public-private scholarship awarded for academic potential]
+  )
 )
 #entry(
   title: "Bachelor of Science Business Information Systems", 
@@ -105,7 +107,7 @@
   )
 )
 #entry(
-  title: "Corporate State University’s Mobile App", 
+  title: "Catch The Train", 
   companyOrUniversity: "Personal Project", 
   date: "2019", 
   location: "", 

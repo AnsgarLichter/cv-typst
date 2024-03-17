@@ -1,8 +1,44 @@
 #import "template.typ": *
+#import "@preview/fontawesome:0.1.0": *
 
 #show: cv
 
-#header()
+#let icons = (
+  phone: fa-phone(),
+  homepage: fa-home(fill: colors.accent),
+  linkedin: fa-linkedin(fill: colors.accent),
+  github: fa-github(fill: colors.accent),
+  xing: fa-xing(),
+  mail: fa-envelope(fill: colors.accent)
+)
+
+#header(
+  fullName: [Ansgar Lichter],
+  jobTitle: [Master Student Computer Science at SAP],
+  socials: (
+    (
+      icon: icons.github,
+      text: [AnsgarLichter],
+      link: "https://github.com/AnsgarLichter"
+    ),
+    (
+      icon: icons.homepage,
+      text: [ansgarlichter.com],
+      link: "https://ansgarlichter.com"
+    ),
+    (
+      icon: icons.mail,
+      text: [lichteransgar\@gmail.com],
+      link: "mailto://lichteransgar@gmail.com"
+    ),
+    (
+      icon: icons.linkedin,
+      text: [ansgarlichter],
+      link: "https://linkedin.com/in/ansgarlichter"
+    )
+  ),
+  profilePicture: "../media/profilePhoto.jpeg"
+)
 
 #section("Professional Experience")
 #entry(
@@ -10,7 +46,7 @@
   companyOrUniversity: "SAP SE", 
   date: "09/2022 - 09/2024", 
   location: "Walldorf, Germany", 
-  logo: "sap.png", 
+  logo: "media/sap.png", 
   description: list(
     [In total 4 rotations in different departments],
     [Consulting & development of several Fiori apps for home office risk assessment using CAP Node.js],
@@ -23,7 +59,7 @@
   companyOrUniversity: "SEW-EURODRIVE", 
   date: "09/2020 - 08/2022", 
   location: "Graben-Neudorf, Germany", 
-  logo: "sew.png", 
+  logo: "media/sew.png", 
   description: list(
     [Development in the SAP EWM system with ABAP OO, developed web applications for handling logistic processes with SAPUI5 and OData-Services],
     [Creation of a new template for manual warehouses for all plants worldwide, including coordination with the relevant departments],
@@ -34,7 +70,7 @@
   companyOrUniversity: "SEW-EURODRIVE", 
   date: "09/2017 - 09/2020", 
   location: "Bruchsal / Graben-Neudorf, Germany", 
-  logo: "sew.png", 
+  logo: "media/sew.png", 
   description: list(
     [Development tasks (web applications, transactions, scripts) in different departments with in the context of different SAP systems],
     [ABAP OO, ODataV2, SAPUI5],
@@ -49,7 +85,7 @@
   companyOrUniversity: "University of Applied Sciences Karlsruhe", 
   date: "09/2022 - 09/2024", 
   location: "Karlsruhe, Germany", 
-  logo: "hka.png", 
+  logo: "media/hka.png", 
   description: list(
     [Thesis: A Comparative Analysis of PostgreSQL and SAP HANA in the Context of the SAP Cloud Application Programming Model - Developing a Recommendation Framework],
     [Minor: Software Engineering],
@@ -61,7 +97,7 @@
   companyOrUniversity: "University of Applied Sciences Karlsruhe",
   date: "09/2023 - 09/2024",
   location: "",
-  logo: "stipendium.png",
+  logo: "media/stipendium.png",
   description: list(
     [Public-private scholarship awarded for academic potential]
   )
@@ -71,7 +107,7 @@
   companyOrUniversity: "Corporate State University Karlsruhe", 
   date: "09/2017 - 09/2020", 
   location: "Karlsruhe, Germany", 
-  logo: "dhbw.png", 
+  logo: "media/dhbw.png", 
   description: list(
     [Thesis: Digitalization of the intralogistics – evaluation of various pick-by-solutions to improve the picking process at SEW-EURODRIVE],
     [Minor: Software Engineering],
@@ -80,7 +116,33 @@
 )
 
 #pagebreak()
-#header()
+#header(
+  fullName: [Ansgar Lichter],
+  jobTitle: [Master Student Computer Science at SAP],
+  socials: (
+    (
+      icon: icons.github,
+      text: [AnsgarLichter],
+      link: "https://github.com/AnsgarLichter"
+    ),
+    (
+      icon: icons.homepage,
+      text: [ansgarlichter.com],
+      link: "https://ansgarlichter.com"
+    ),
+    (
+      icon: icons.mail,
+      text: [lichteransgar\@gmail.com],
+      link: "mailto://lichteransgar@gmail.com"
+    ),
+    (
+      icon: icons.linkedin,
+      text: [ansgarlichter],
+      link: "https://linkedin.com/in/ansgarlichter"
+    )
+  ),
+  profilePicture: "../media/profilePhoto.jpeg"
+)
 
 #section("Programming Expertise")
 #entry(
@@ -88,7 +150,7 @@
   companyOrUniversity: "Personal Project", 
   date: "2023 - 2024", 
   location: "", 
-  logo: "ExportKindleClippingsToNotion.jpeg", 
+  logo: "media/ExportKindleClippingsToNotion.jpeg", 
   description: list(
     [CLI-Tool to export your kindle clippings to Notion],
     [Written in C\# using the official Notion API]
@@ -99,7 +161,7 @@
   companyOrUniversity: "University Project", 
   date: "2020", 
   location: "", 
-  logo: "dhbw.png", 
+  logo: "media/dhbw.png", 
   description: list(
     [Maintenance and further Development of the following features: Live departure times of trains, lecture schedule and cafeteria menu],
     [Upgrade of the used frameworks to the latest version],
@@ -111,7 +173,7 @@
   companyOrUniversity: "Personal Project", 
   date: "2019", 
   location: "", 
-  logo: "CatchTheTrain.jpeg", 
+  logo: "media/CatchTheTrain.jpeg", 
   description: list(
     [Fetch the live departures times more comfortable],
     [Using Flutter & the official API of the local public transport services company]
